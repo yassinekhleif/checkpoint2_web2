@@ -1,0 +1,15 @@
+ALGORITHM playing_card
+VAR
+    i: INTEGER
+    arr: ARRAY_OF type[5];
+    aux: INTEGER
+BEGIN
+    FOR i FROM 5 TO 0 STEP 4  DO
+    aux :=0
+        IF (T[i]>T[i-1]) THEN
+            aux:=T[i]
+            T[i]:= T[i-1]
+            T[i-1]:= aux
+        END_IF
+    END_FOR
+END
